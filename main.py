@@ -1,8 +1,5 @@
 """
-Created on Fri Jan 30 2021
-
 @author: Harish_3055
-Project Name :- bSafe 
 """
 import flask
 from flask import Flask, request, render_template
