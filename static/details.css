@@ -1,0 +1,33 @@
+
+body{
+    background:rgb(227,234,167);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.mt-n1 {
+    margin-top: -1rem !important;
+}
+.feat{
+border-radius: 10px;
+border: 5px solid rgb(47, 51, 48);
+background: rgb(181,231,160);
+}
+.feat:hover{
+box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+.panel-body{
+margin-top: -0.5rem !important;
+}
+.size{
+    font-size: 20px;
+}
+@media only screen and (max-width: 321px) {
+    .size{
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width:600px){
+    .size{
+        font-size: 15px;
+    }
+}

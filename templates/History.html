@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Transaction History</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/style_cust.css">
+</head>
+<body >
+<div class="container">
+    <div class="row py-3 " style="background:rgb(121, 160, 62); box-shadow: 1px 10px 15px rgba(14, 14, 14, 0.719);border: 1px solid rgb(47, 51, 48);">
+      <div class="col-12 text-center">
+        <h3 class="text-white" style="font-family: 'Anton', sans-serif;">Transaction History</h3>
+      </div>
+    </div>
+</div>
+<div class="container" style="margin-top:20px;">
+    {%for i in range(0, leng)%}    
+
+        <div class="row row_field py-2 ml-1 mr-1 mb-2" >
+            <div class="col-9" >
+                <p style="font-family: 'Arimo', sans-serif;font-size:20px;">
+                <b>{{pred[i][0]}} &nbsp;-&nbsp;{{pred[i][1]}}</b>
+                </p>
+            </div>
+            <div class="col-3">
+                <p class="mt-3 ml-2"><b>₹{{pred[i][2]}}</b></p>
+            </div>
+        </div>
+        {%endfor%}
+<div class="container text-center">
+   <a href="/" style="text-decoration:none;color:black;">
+    <button  type="submit" class="btn btn-danger">END </button>
+    </a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

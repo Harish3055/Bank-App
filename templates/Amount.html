@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Enter Amount</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/Amount.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row py-3 " style="background:rgb(121, 160, 62); box-shadow: 1px 10px 15px rgba(14, 14, 14, 0.719);border: 1px solid rgb(47, 51, 48);">
+          <div class="col-12 text-center">
+
+            <h3 class="text-white" style="font-family: 'Anton', sans-serif;">Enter Amount</h3>
+          </div>
+        </div>
+    </div>
+    <div class="container mt-4  py-5" >
+        <form>
+        <input class="form-control form-control-lg" type="text" placeholder="value" id="Amount" required>
+        </form>
+        <div class="container mt-5 mb-3 text-white bg-dark"style="border-radius:10px;" >
+            <div class="row ">
+              <div class="col-4">
+              <br>
+
+              <p><b>Name</b><p>
+              <p><b>Phone no</b></p>
+              <p><b>Email id</b></p>
+              <p><b>Acc no</b></p>
+              <p><b>IFSC code</b></p>
+              <p><b>Balance</b></p>
+              </div>
+              <div class="col-8 pr-2">
+        
+              <br>
+              <p><b>: {{i[0]}}</b><p>
+              <p><b>: {{i[1]}}</b></p>
+              <p><b>: {{i[2]}}</b></p>
+              <p><b>: {{i[3]}}</b></p>
+              <p><b>: {{i[4]}}</b></p>
+              <p><b id="Balance">: {{i[5]}}</b></p>
+              </div>
+            </div>
+        </div>
+    <div class="container ">
+        <div class="" id="add_class">
+            <strong><h2 id="add_text"></h2></strong>
+        </div>
+    </div>
+    
+    <div class="container text-center">
+    <button onclick="func()" type="submit" class="btn btn-danger">Transfer </button>
+    </div>
+
+<script>
+    function func(){
+        var a=document.getElementById('Amount').value;
+        var bal={{i[5]}};
+        console.log()
+        if (a){
+          if (parseInt(a)<=parseInt(bal) && parseInt(a)>0 &&parseInt(bal)>0){
+            window.location.href ='/customer/Receiver_select/details/'+{{index}}+'/'+a.toString();
+          }
+          else{
+            document.getElementById("add_class").className = "alert alert-danger";
+            document.getElementById("add_class").textContent ="Warning! Insufficient Balance";
+          }
+        }
+        else{
+            document.getElementById("add_class").className = "alert alert-danger";
+            document.getElementById("add_class").textContent ="Warning! Enter the Amount";
+        }
+    }
+</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
